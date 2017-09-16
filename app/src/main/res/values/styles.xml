@@ -1,11 +1,32 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">#8BC34A</item>
+        <item name="colorPrimaryDark">#689F38</item>
+        <item name="colorButtonNormal">#8BC34A</item>
+    </style>
+    <!-- White button -->
+    <style name="ButtonWhite" parent="AppTheme">
+        <item name="colorButtonNormal">#F1F8E9</item>
+    </style>
+    <!-- Black button -->
+    <style name="ButtonBlack" parent="AppTheme">
+        <item name="colorButtonNormal">#000000</item>
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+    <!-- Blue button -->
+    <style name="ButtonBlue" parent="AppTheme">
+        <item name="colorButtonNormal">#2196F3</item>
+    </style>
+    <!-- Red button -->
+    <style name="ButtonRed" parent="AppTheme">
+        <item name="colorButtonNormal">#F44336</item>
+    </style>
+    <!-- Yellow button -->
+    <style name="ButtonYellow" parent="AppTheme">
+        <item name="colorButtonNormal">#FFEB3B</item>
     </style>
 
 </resources>
