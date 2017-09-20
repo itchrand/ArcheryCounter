@@ -1,6 +1,6 @@
 package it.seahawk.archerycounter
 /*
- ArcheryCounter: 0.1.0
+ ArcheryCounter: 0.1.1
  author: ac
  */
 import android.support.v7.app.AppCompatActivity
