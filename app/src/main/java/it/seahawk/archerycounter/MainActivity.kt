@@ -1,6 +1,6 @@
 package it.seahawk.archerycounter
 /*
- ArcheryCounter: 0.1.0
+ ArcheryCounter: 0.1.1
  author: ac
  */
 import android.support.v7.app.AppCompatActivity
@@ -64,8 +64,8 @@ class MainActivity : AppCompatActivity() {
      * Update last scores of Archer A.
      */
     fun updateScoresA(score: Int) {
-        scoreArcherA = scoreArcherA + score
-        countArrowsArcherA = countArrowsArcherA + 1
+        scoreArcherA += score
+        countArrowsArcherA ++
         when (countArrowsArcherA) {
             1 -> lastScoresA[0] = score
             2 -> lastScoresA[1] = score
@@ -82,8 +82,8 @@ class MainActivity : AppCompatActivity() {
      * Update last scores of Archer B.
      */
     fun updateScoresB(score: Int) {
-        scoreArcherB = scoreArcherB + score
-        countArrowsArcherB = countArrowsArcherB + 1
+        scoreArcherB += score
+        countArrowsArcherB ++
         when (countArrowsArcherB) {
             1 -> lastScoresB[0] = score
             2 -> lastScoresB[1] = score
@@ -101,7 +101,7 @@ class MainActivity : AppCompatActivity() {
      */
     fun scoreTenX(view: View) {
         updateScoresA(10)
-        countXArcherA = countXArcherA + 1
+        countXArcherA += 1
         displayScoresForArcherA()
     }
 
@@ -199,7 +199,7 @@ class MainActivity : AppCompatActivity() {
      */
     fun scoreTenX_b(view: View) {
         updateScoresB(10)
-        countXArcherB = countXArcherB + 1
+        countXArcherB += 1
         displayScoresForArcherB()
     }
 
@@ -301,10 +301,8 @@ class MainActivity : AppCompatActivity() {
         countXArcherB = 0
         countArrowsArcherA = 0
         countArrowsArcherB = 0
-        for (i in lastScoresA.indices)
-            lastScoresA[i] = 0
-        for (i in lastScoresB.indices)
-            lastScoresB[i] = 0
+        lastScoresA.forEach { i -> 0 }
+        lastScoresB.forEach { i -> 0 }
 
         displayScoresForArcherA()
         displayScoresForArcherB()
